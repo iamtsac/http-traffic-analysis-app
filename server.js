@@ -35,6 +35,4 @@ var server = app.listen(3000, function () {
 
 login(app,connection,path);
 
-signup(app,connection);
-
-
+signup(app,connection); 
