@@ -6,6 +6,7 @@ import * as mysql from 'mysql'
 import { login } from './backend/login.js'
 import { signup } from './backend/signup.js'
 var app = express()
+var mysql = require("mysql");
 
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -20,10 +21,13 @@ var connection = mysql.createConnection({
     database: "web"
 });
 
+
 connection.connect(function (err) {
     if (err) throw err;
     console.log("Connected");
 }); 
+
+module.exports = connection;
 
 var server = app.listen(3000, function () {
 
