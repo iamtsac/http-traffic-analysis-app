@@ -1,3 +1,4 @@
+
 import bodyParser from 'body-parser';
 import path from 'path'
 import express from 'express';
@@ -14,8 +15,8 @@ app.use(express.static('html'));
 
 var connection = mysql.createConnection({
     host: "localhost",
-    user: "tsac",
-    password: "password",
+    user: "antonis",
+    password: "antonis",
     database: "web"
 });
 
@@ -36,5 +37,4 @@ var server = app.listen(3000, function () {
 login(app,connection,path);
 
 signup(app,connection);
-
 

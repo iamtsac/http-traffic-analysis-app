@@ -2,7 +2,7 @@ import SHA1 from 'crypto-js/sha1.js';
 
 export function signup(app, connection) {
     app.get('/', function (request, response) {
-        response.sendFile(path.join('/home/tsac/server/node_server/html/signup.html'));
+        response.sendFile(path.join('/home/antonis/http-traffic-analysis-app/html/signup.html'));
     });
 
     app.post('/signup', function (request, response) {

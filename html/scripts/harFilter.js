@@ -45,4 +45,5 @@ function filterHar() {
   } 
 }
 
+
 fileLoad.onchange = filterHar; 
