@@ -50,6 +50,7 @@ function readHar() {
                     "serverIPAddress": harEntry[key]["serverIPAddress"],
                     "wait": harEntry[key].timings["wait"],
                     "url": harEntry[key].request["url"],
+                    "method": harEntry[key].request["method"],
                     "status": harEntry[key].response["status"],
                     "statusText": harEntry[key].response["statusText"],
                 };
