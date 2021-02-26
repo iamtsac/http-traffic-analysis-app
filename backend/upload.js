@@ -1,4 +1,5 @@
-export function uploadHar(app, connection) {
+module.exports.upload = function (app, connection) {
+    
     app.post("/upload", function (request, response) {
 
         //connection.query('INSERT INTO User (username, e_mail, passwd) VALUES (?, ?, ?)', [username, e_mail, password]);

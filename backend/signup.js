@@ -1,10 +1,7 @@
-import SHA1 from 'crypto-js/sha1.js';
+var SHA1 = require('crypto-js/sha1.js');
 
-export function signup(app, connection) {
-    app.get('/', function (request, response) {
-        response.sendFile(path.join('/home/tsac/Projects/http_crowdsourced_traffic/node_server/html/signup.html'));
-    });
-
+module.exports.signup = function signup(app, connection) {
+    
     app.post('/signup', function (request, response) {
 
         var username = request.body.username;
@@ -15,6 +12,6 @@ export function signup(app, connection) {
 
         connection.query('INSERT INTO User (username, e_mail, passwd) VALUES (?, ?, ?)', [username, e_mail, password]);
 
-        response.send('COOL');
+        response.redirect('login.html');
     });
 }

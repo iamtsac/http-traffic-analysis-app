@@ -4,9 +4,6 @@
   "description": "Web Project",
   "type": "module",
   "main": "server.js",
-  "scripts": {
-    "start": "nodemon server.js"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/iamtsac/http-traffic-analysis-app.git"
